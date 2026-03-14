@@ -1,11 +1,5 @@
 {
     "python.defaultInterpreterPath": "/Volumes/work/conda_env/envs/python_prep/bin/python",
-    "python.terminal.activateEnvironment": true,
-    "jupyter.askForKernelDisplayName": false,
-    "jupyter.activeInterpreter": "/Volumes/work/conda_env/envs/python_prep/bin/python",
-    "jupyter.pinnedKernels": {
-        "python3": "/Volumes/work/conda_env/envs/python_prep/bin/python"
-    },
-    "notebook.kernelPicker.type": "all",
-    "notebook.selectedKernel": "conda-env-Volumes-work-conda_env-envs-python_prep-py"
+    "jupyter.defaultInterpreter": "/Volumes/work/conda_env/envs/python_prep/bin/python",
+    "notebook.selectedKernel": "python_prep"
 }
