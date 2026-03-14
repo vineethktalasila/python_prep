@@ -1,0 +1,7 @@
+{
+    "venvPath": "/Volumes/work/conda_env/envs",
+    "venv": "python_prep",
+    "pythonVersion": "3.11", 
+    "reportMissingImports": true,
+    "typeCheckingMode": "basic"
+}
