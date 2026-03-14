@@ -1,5 +1,7 @@
 {
     "python.defaultInterpreterPath": "/Volumes/work/conda_env/envs/python_prep/bin/python",
-    "python.terminal.activateEnvironment": true,
-    "workbench.colorTheme": "Default Dark Modern"
+    "terminal.integrated.env.osx": {
+        "PATH": "/Volumes/work/conda_env/bin:${env:PATH}"
+    },
+    "python.terminal.activateEnvironment": true
 }
