@@ -1,5 +1,7 @@
 {
     "python.defaultInterpreterPath": "/Volumes/work/conda_env/envs/python_prep/bin/python",
+    "python.terminal.activateEnvironment": true,
+    "jupyter.askForKernelDisplayName": false,
     "jupyter.defaultInterpreter": "/Volumes/work/conda_env/envs/python_prep/bin/python",
     "notebook.selectedKernel": "python_prep"
 }
