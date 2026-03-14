@@ -4,3 +4,4 @@ __pycache__
 .ipynb_checkpoints/
 TA_evaluation_materials.zip
 TA_evaluation_materials/
+pyrightconfig.json
