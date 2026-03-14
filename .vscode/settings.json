@@ -5,5 +5,5 @@
     "jupyter.defaultInterpreter": "/Volumes/work/conda_env/envs/python_prep/bin/python",
     "notebook.selectedKernel": "python_prep",
     "workbench.colorTheme": "Default Dark Modern",
-    "python.condaPath": "/Volumes/work/conda_env/bin/conda",
+    "python.condaPath": "/Volumes/work/conda_env/bin/conda"
 }
