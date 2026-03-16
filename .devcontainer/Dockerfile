@@ -23,6 +23,3 @@ ENV PATH="/usr/lib/ccache:${PATH}"
 # 4. Environment Variable Injection
 # Set Zsh as the default shell to mirror your APFS environment deterministically.
 RUN chsh -s $(which zsh) vscode
-
-# Prepend ccache to the path so gcc/g++ invocations are automatically cached
-ENV PATH="/usr/lib/ccache:${PATH}"
