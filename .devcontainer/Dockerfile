@@ -1,11 +1,9 @@
-# 1. Base Topology Fix
-# Reverting to the valid major version tree. Using '0-bookworm' maps 
-# directly to Debian 12, ensuring a modern kernel for scientific compute.
-FROM mcr.microsoft.com/devcontainers/miniconda:0-bookworm
+# 1. Base Topology Upgrade
+# Extracting from the registry manifest, '1-3' maps to Major Version 1, Python 3.
+# This modernizes the underlying OS layer, naturally resolving deprecated index errors.
+FROM mcr.microsoft.com/devcontainers/miniconda:1-3
 
 # 2. Resilient Package Acquisition
-# The --allow-releaseinfo-change flag mathematically bypasses the upstream 
-# Debian suite transition that caused your original Exit 100 error.
 RUN export DEBIAN_FRONTEND=noninteractive \
     && apt-get update --allow-releaseinfo-change \
     && apt-get -y install --no-install-recommends \
@@ -23,5 +21,5 @@ RUN export DEBIAN_FRONTEND=noninteractive \
 ENV PATH="/usr/lib/ccache:${PATH}"
 
 # 4. Environment Variable Injection
-# Set Zsh as the default shell to mirror the APFS environment deterministically.
+# Set Zsh as the default shell to mirror your APFS environment deterministically.
 RUN chsh -s $(which zsh) vscode
