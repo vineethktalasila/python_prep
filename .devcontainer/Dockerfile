@@ -1,15 +1,22 @@
-# Base image optimized for Python/C++ scientific computing
-FROM mcr.microsoft.com/devcontainers/miniconda:0-3
+# 1. Base Topology Upgrade
+# Utilizing the '1' tag ensures the latest stable Debian kernel is used, 
+# mitigating immediate repository archiving issues.
+FROM mcr.microsoft.com/devcontainers/miniconda:1
 
-# Install rigorous build-essential tools for compiled binaries (C++, CMake)
-RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
+# 2. Resilient Package Acquisition
+# The --allow-releaseinfo-change flag acts as a permanent fix against 
+# future upstream suite transitions (e.g., stable -> oldstable).
+RUN export DEBIAN_FRONTEND=noninteractive \
+    && apt-get update --allow-releaseinfo-change \
     && apt-get -y install --no-install-recommends \
         build-essential \
         cmake \
         gfortran \
         git \
         zsh \
-    && apt-get clean -y && rm -rf /var/lib/apt/lists/*
+    && apt-get clean -y \
+    && rm -rf /var/lib/apt/lists/*
 
-# Set Zsh as the default shell to mirror your local APFS environment
+# 3. Environment Variable Injection
+# Set Zsh as the default shell to mirror the APFS environment deterministically.
 RUN chsh -s $(which zsh) vscode
