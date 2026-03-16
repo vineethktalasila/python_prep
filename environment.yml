@@ -1,0 +1,14 @@
+name: python_prep
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - numpy
+  - scikit-learn
+  - jupyter
+  - pandas
+  - seaborn
+  - statsmodels
+  - matplotlib
+  - scipy
+prefix: /Volumes/work/conda_env/envs/python_prep
