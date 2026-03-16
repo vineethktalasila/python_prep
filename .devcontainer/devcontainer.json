@@ -1,0 +1,28 @@
+{
+    "name": "High-Energy Compute Node",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "context": ".."
+    },
+    "features": {
+        "ghcr.io/devcontainers/features/github-cli:1": {}
+    },
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "python.defaultInterpreterPath": "/opt/conda/bin/python",
+                "terminal.integrated.defaultProfile.linux": "zsh"
+            },
+            "extensions": [
+                "ms-python.python",
+                "ms-python.vscode-pylance",
+                "ms-toolsai.jupyter",
+                "ms-vscode.cpptools",
+                "github.copilot",
+                "github.copilot-chat"
+            ]
+        }
+    },
+    "remoteUser": "vscode",
+    "postCreateCommand": "bash -c 'if [ -f environment.yml ]; then echo \"YAML detected. Compiling specific environment...\" && conda env update -n base -f environment.yml; else echo \"No YAML found. Bootstrapping baseline scientific compute libraries...\" && conda update -n base -c defaults conda -y && conda install -n base numpy scipy sympy pandas -y; fi'"
+}
