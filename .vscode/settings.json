@@ -3,5 +3,14 @@
     "terminal.integrated.env.osx": {
         "PATH": "/Volumes/work/conda_env/bin:${env:PATH}"
     },
-    "python.terminal.activateEnvironment": true
+    "python.terminal.activateEnvironment": false,
+    "terminal.integrated.profiles.osx": {
+        "zsh (Conda)": {
+            "path": "zsh",
+            "args": ["-c", "source /Volumes/work/conda_env/bin/activate python_prep; exec zsh"]
+        }
+    },
+    "terminal.integrated.defaultProfile.osx": "zsh (Conda)",
+    "python-envs.defaultEnvManager": "ms-python.python:conda",
+    "python-envs.defaultPackageManager": "ms-python.python:conda"
 }
